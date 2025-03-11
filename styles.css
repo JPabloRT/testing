@@ -1,0 +1,146 @@
+.question-row {
+    background-color: #ffffff;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.question-row:hover {
+    background-color: #f8f9fa;
+}
+
+.pregunta-container {
+    padding: 15px;
+}
+
+.pregunta-box {
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.pregunta-box:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.options-container {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #dee2e6;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-check {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.form-check:hover {
+    background-color: #f8f9fa;
+}
+
+.form-check-label {
+    cursor: pointer;
+    padding-left: 8px;
+}
+
+.form-check-input:checked + .form-check-label {
+    color: #0056b3;
+    font-weight: 500;
+}
+
+/* Estilos para la leyenda de opciones */
+.options-legend {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.options-legend ul li {
+    margin-bottom: 10px;
+    padding: 8px;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.options-legend ul li:hover {
+    background-color: #e9ecef;
+}
+
+.options-legend .bi-arrow-right {
+    color: #0056b3;
+    margin-right: 8px;
+}
+
+.options-legend strong {
+    font-size: 1.1em;
+}
+
+#resultados {
+    margin-top: 2rem;
+}
+
+#datosPersonales {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.invalid-pair {
+    background-color: #ffe6e6;
+}
+
+.valid-pair {
+    background-color: #e6ffe6;
+}
+
+/* Estilos para el logo */
+#logo {
+    max-height: 120px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+#logo:hover {
+    transform: scale(1.05);
+}
+
+/* Asegurarse que el logo sea responsivo */
+@media (max-width: 768px) {
+    #logo {
+        max-height: 80px;
+    }
+}
+
+/* Estilos para las etiquetas A y B */
+.question-row strong.text-primary {
+    color: #0056b3 !important;
+    font-size: 1.1em;
+    margin-right: 8px;
+    display: inline-block;
+}
+
+.question-row .col-md-4 {
+    padding: 15px;
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.question-row .col-md-4:first-child:hover,
+.question-row .col-md-4:last-child:hover {
+    background-color: #f8f9fa;
+}

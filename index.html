@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Psicometrico</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container mt-4">
+        <!-- Logo y título -->
+        <div class="text-center mb-4">
+            <img id="logo" src="images/logo.png" alt="Logo Test Psicometrico" class="img-fluid mb-3" style="max-height: 120px;">
+            <h1 class="mb-4">Test de Psicometria</h1>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress mb-4">
+            <div id="formProgress" class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2>Información Personal</h2>
+            </div>
+            <div class="card-body">
+                <form id="infoPersonal" class="row g-3">
+                    <div class="col-md-6">
+                        <label for="nombre" class="form-label">Nombre Completo</label>
+                        <input type="text" class="form-control" id="nombre" required>
+                    </div>
+                    <div class="col-md-2">
+                        <label for="edad" class="form-label">Edad</label>
+                        <input type="number" class="form-control" id="edad" min="18" max="120" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="sexo" class="form-label">Sexo</label>
+                        <select class="form-select" id="sexo" required>
+                            <option value="">Seleccionar...</option>
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                            <option value="O">Otro</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="email" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="email" required>
+                        <div class="form-text">Se enviará una confirmación a este correo.</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2>Primera Parte</h2>
+                <p class="mb-0">Por favor seleccione una opción para cada par de frases según la importancia que usted le da a cada frase en su vida personal.</p>
+                <div class="options-legend mt-2">
+                    <p class="mb-1"><strong>Opciones de respuesta:</strong></p>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-arrow-right"></i> Totalmente de acuerdo con <strong class="text-primary">A</strong> (3-0): Opción A es mucho más importante que B</li>
+                        <li><i class="bi bi-arrow-right"></i> Ligeramente de acuerdo con <strong class="text-primary">A</strong> (2-1): Opción A es algo más importante que B</li>
+                        <li><i class="bi bi-arrow-right"></i> Ligeramente de acuerdo con <strong class="text-primary">B</strong> (1-2): Opción B es algo más importante que A</li>
+                        <li><i class="bi bi-arrow-right"></i> Totalmente de acuerdo con <strong class="text-primary">B</strong> (0-3): Opción B es mucho más importante que A</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-body">
+                <form id="parte1">
+                    <!-- Las preguntas se generarán dinámicamente -->
+                </form>
+            </div>
+        </div>
+
+        <div class="card mb-4">
+            <div class="card-header">
+                <h2>Segunda Parte</h2>
+                <p class="mb-0">Por favor seleccione una opción para cada par de frases según cuál considera más inaceptable.</p>
+                <div class="options-legend mt-2">
+                    <p class="mb-1"><strong>Opciones de respuesta:</strong></p>
+                    <ul class="list-unstyled">
+                        <li><i class="bi bi-arrow-right"></i> Totalmente de acuerdo con <strong class="text-primary">A</strong> (3-0): Opción A es mucho más importante que B</li>
+                        <li><i class="bi bi-arrow-right"></i> Ligeramente de acuerdo con <strong class="text-primary">A</strong> (2-1): Opción A es algo más importante que B</li>
+                        <li><i class="bi bi-arrow-right"></i> Ligeramente de acuerdo con <strong class="text-primary">B</strong> (1-2): Opción B es algo más importante que A</li>
+                        <li><i class="bi bi-arrow-right"></i> Totalmente de acuerdo con <strong class="text-primary">B</strong> (0-3): Opción B es mucho más importante que A</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card-body">
+                <form id="parte2">
+                    <!-- Las preguntas se generarán dinámicamente -->
+                </form>
+            </div>
+        </div>
+
+        <div class="text-center mb-4">
+            <button id="guardarProgresoBtn" class="btn btn-secondary me-2">Guardar Progreso</button>
+            <button id="evaluarBtn" class="btn btn-primary">Guardar Respuestas</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
